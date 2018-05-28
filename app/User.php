@@ -10,6 +10,10 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo("App\User");
     }
+
+    public function profile(){
+        return $this->hasOne("App/seeker_profile");
+    }
     use Notifiable;
 
     /**
