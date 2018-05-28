@@ -12,4 +12,8 @@ class seeker_profile extends Model
     public function Education(){
         return $this->hasMany("App/education_detail");
     }
+
+    public function Experience(){
+        return $this->hasMany("App/Experience_Detail");
+    }
 }
