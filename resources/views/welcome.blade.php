@@ -93,7 +93,6 @@
             }
 
             .image{
-                width: 100vh;
                 position: absolute;
                 top: 100px;
             }
@@ -144,7 +143,7 @@
             </ul>
         </div>
                 <div class="image">
-                    <img src="{{ URL::to('/') }}/images/image.jpg">
+                    <img src="{{ URL::to('/') }}/images/image1.jpg">
                 </div>
 
             <div class="grid-container">
