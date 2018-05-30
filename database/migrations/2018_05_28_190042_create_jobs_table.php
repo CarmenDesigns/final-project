@@ -20,6 +20,8 @@ class CreateJobsTable extends Migration
             $table->integer("company_id");
             $table->string("title");
             $table->mediumText("job-description");
+            $table->unsignedInteger("joblocation_id");
+            $table->foreign("joblocation_id")->references("id")->on("job_locations");
             $table->timestamps();
         });
     }

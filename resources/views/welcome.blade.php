@@ -18,7 +18,7 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+
             }
 
             .full-height {
@@ -44,7 +44,7 @@
             .nav{
                 position: absolute;
                 justify-items: left;
-                left: 300px;
+                left: 90px;
                 top: 20px;
 
             }
@@ -92,7 +92,27 @@
                 left: 15px;
             }
 
+            .image{
+                width: 100vh;
+                position: absolute;
+                top: 100px;
+            }
 
+            .grid-container{
+                display: inline-flex;
+                margin: 20px;
+                padding: 110px;
+                width: unset;
+
+            }
+
+            .column{
+                padding: 50px;
+            }
+
+            .middle-column{
+                text-align: center;
+            }
 
         </style>
     </head>
@@ -123,8 +143,29 @@
                 <input type="text" placeholder="Search..">
             </ul>
         </div>
+                <div class="image">
+                    <img src="{{ URL::to('/') }}/images/image.jpg">
+                </div>
 
+            <div class="grid-container">
 
+                    <div class="column">
+                        <h2>Welcome to our Page</h2>
+                             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi architecto corporis ea et eum, eveniet fuga iste laboriosam magni molestias officia porro quam quibusdam ratione repudiandae sed unde voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum explicabo, fugit in incidunt labore officia omnis pariatur suscipit vel. Aspernatur et expedita ipsa molestiae nesciunt optio pariatur praesentium quia repudiandae.</p>
+                     </div>
+
+                    <div class="column">
+                        <h2>Improve yourself</h2>
+                             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consequuntur, voluptates! Ab alias, animi blanditiis deleniti, excepturi, illum ipsum maxime nam nesciunt nihil quo suscipit. Aut dignissimos fugit iste quia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at beatae esse est illum, inventore ipsum laudantium non nostrum quas quisquam repudiandae similique soluta temporibus tenetur totam velit, vero. Cumque?</p>
+                    </div>
+            </div>
         </div>
+
+        <div class="middle-column">
+            <h1>Zijn deze beroepsgroepen misschien iets voor jou?</h1>
+        </div>
+
+
+
     </body>
 </html>
