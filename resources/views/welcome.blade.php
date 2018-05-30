@@ -36,13 +36,13 @@
             }
 
             .top-right {
-                position: absolute;
+                position: fixed;
                 right: 10px;
-                top: 20px;
+                top: 38px;
             }
 
             .nav{
-                position: absolute;
+                position: fixed;
                 justify-items: left;
                 left: 90px;
                 top: 20px;
@@ -87,13 +87,11 @@
             }
 
             .logo{
-                position: absolute;
-                top: 20px;
-                left: 15px;
+
             }
 
             .image{
-                position: absolute;
+                position: fixed;
                 top: 100px;
             }
 
@@ -129,9 +127,7 @@
                 </div>
             @endif
 
-            <div class="logo">
 
-            </div>
         <div class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
