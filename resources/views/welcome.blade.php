@@ -206,29 +206,32 @@
             <h1>Come to one of our workshops</h1>
         </div>
 
+        News title:<br>
+        <form method="post" action="/news/">
+            @csrf
+            <input type="text" name="name" id="name" placeholder="name"><br>
+            <textarea rows="6" cols="40">
+
+            </textarea>
+            <input type="submit" value="Add">
+        </form>
+
         <div class="container">
-            
-                News name:<br>
-                <form method="post" action="/news/{{$news->id}}">
-                    @csrf
-                    <input type="text" name="name" id="name" placeholder="name"><br>
-                    <input type="submit" value="Add">
-                </form>
 
             <div class="tab">
-                <button class="tablinks" onclick="openNews(event, 'London')">London</button>
-                <button class="tablinks" onclick="openNews(event, 'Paris')">Paris</button>
+                <button class="tablinks" onclick="openNews(event, 'Workshop1')">Workshop</button>
+                <button class="tablinks" onclick="openNews(event, 'Workshop2')">Workshop</button>
 
             </div>
 
-            <div id="London" class="tabcontent">
-                <h3>London</h3>
-                <p>London is the capital city of England.</p>
+            <div id="Workshop1" class="tabcontent">
+                <h3>Workshop</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolores ducimus est natus quas quia, reprehenderit sint. Alias autem, deserunt doloribus enim error illo impedit ipsam iure, sequi velit veniam?.</p>
             </div>
 
-            <div id="Paris" class="tabcontent">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p>
+            <div id="Workshop2" class="tabcontent">
+                <h3>Workshop</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto aspernatur aut deleniti earum ipsa, magnam sed. Consequatur dolorum est fuga ipsa iste nam necessitatibus nobis odio perspiciatis, sunt? Aperiam.</p>
             </div>
 
         </div>
