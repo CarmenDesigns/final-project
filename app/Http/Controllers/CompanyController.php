@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\company_account;
+use App\Company;
 use Illuminate\Http\Request;
 
-class CompanyAccountController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class CompanyAccountController extends Controller
      */
     public function index()
     {
-        //
+        $companies =  company::all();
+        return view ('company.index', compact('companies'));
     }
 
     /**
@@ -24,7 +25,7 @@ class CompanyAccountController extends Controller
      */
     public function create()
     {
-        //
+        return view ('company.create');
     }
 
     /**
@@ -35,16 +36,16 @@ class CompanyAccountController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Company::create($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\company_account  $company_account
+     * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
-    public function show(company_account $company_account)
+    public function show($id)
     {
         //
     }
@@ -52,33 +53,35 @@ class CompanyAccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\company_account  $company_account
+     * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(company_account $company_account)
+    public function edit($id)
     {
-        //
+        $company = company::find($id);
+        return view("company.update", compact('company'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\company_account  $company_account
+     * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, company_account $company_account)
+    public function update(Request $request, $id)
     {
-        //
+        $company = Company::find($id);
+        $company->update($request->all());
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\company_account  $company_account
+     * @param  \App\company $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(company_account $company_account)
+    public function destroy($id)
     {
         //
     }

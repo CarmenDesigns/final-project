@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->unsignedInteger("user_role_id");
             $table->foreign("user_role_id")->references("id")->on("roles");
-            $table->unsignedInteger("company_account_id");
-            $table->foreign("company_account_id")->references("id")->on("company_accounts");
+            $table->unsignedInteger("company_id");
+            $table->foreign("company_id")->references("id")->on("companies");
             $table->timestamps();
         });
     }
