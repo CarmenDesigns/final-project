@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJobPostSkillSetsTable extends Migration
+class CreateCompanyAccountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateJobPostSkillSetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('job_post_skill_sets', function (Blueprint $table) {
+        Schema::create('company_accounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("skill level");
+            $table->string("name");
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateJobPostSkillSetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('job_post_skill_sets');
+        Schema::dropIfExists('company_accounts');
     }
 }

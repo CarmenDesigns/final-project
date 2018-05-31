@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJopPostActivitiesTable extends Migration
+class CreateJobPostActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateJopPostActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('jop_post_activities', function (Blueprint $table) {
+        Schema::create('job_post_activities', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateJopPostActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jop_post_activities');
+        Schema::dropIfExists('job_post_activities');
     }
 }

@@ -16,12 +16,12 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer("posted_by_id");
-            $table->integer("job-type_id");
+            $table->integer("job_type_id");
             $table->integer("company_id");
             $table->string("title");
             $table->mediumText("job-description");
-            $table->unsignedInteger("joblocation_id");
-            $table->foreign("joblocation_id")->references("id")->on("job_locations");
+            $table->unsignedInteger("job_location_id");
+            $table->foreign("job_location_id")->references("id")->on("job_locations");
             $table->timestamps();
         });
     }
