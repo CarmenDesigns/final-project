@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Redirect;
 use App\Company;
 use Illuminate\Http\Request;
+
 
 class CompanyController extends Controller
 {
@@ -60,6 +63,7 @@ class CompanyController extends Controller
     {
         $company = company::find($id);
         return view("company.update", compact('company'));
+
     }
 
     /**
@@ -83,6 +87,11 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $company->delete();
+
+        $companies =  Company::all();
+        return view ('company.index', compact('companies'));
+
     }
 }
