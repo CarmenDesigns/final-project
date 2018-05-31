@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\JopType;
+use App\JobType;
 use Illuminate\Http\Request;
 
 class JopTypeController extends Controller
@@ -41,10 +41,10 @@ class JopTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\JopType  $jopType
+     * @param  \App\JobType  $jopType
      * @return \Illuminate\Http\Response
      */
-    public function show(JopType $jopType)
+    public function show(JobType $jopType)
     {
         //
     }
@@ -52,10 +52,10 @@ class JopTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\JopType  $jopType
+     * @param  \App\JobType  $jopType
      * @return \Illuminate\Http\Response
      */
-    public function edit(JopType $jopType)
+    public function edit(JobType $jopType)
     {
         //
     }
@@ -64,10 +64,10 @@ class JopTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\JopType  $jopType
+     * @param  \App\JobType  $jopType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JopType $jopType)
+    public function update(Request $request, JobType $jopType)
     {
         //
     }
@@ -75,10 +75,10 @@ class JopTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\JopType  $jopType
+     * @param  \App\JobType  $jopType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JopType $jopType)
+    public function destroy(JobType $jopType)
     {
         //
     }

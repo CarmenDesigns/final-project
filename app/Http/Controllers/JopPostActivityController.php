@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\JopPostActivity;
+use App\JobPostActivity;
 use Illuminate\Http\Request;
 
 class JopPostActivityController extends Controller
@@ -41,10 +41,10 @@ class JopPostActivityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\JopPostActivity  $jopPostActivity
+     * @param  \App\JobPostActivity  $jopPostActivity
      * @return \Illuminate\Http\Response
      */
-    public function show(JopPostActivity $jopPostActivity)
+    public function show(JobPostActivity $jopPostActivity)
     {
         //
     }
@@ -52,10 +52,10 @@ class JopPostActivityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\JopPostActivity  $jopPostActivity
+     * @param  \App\JobPostActivity  $jopPostActivity
      * @return \Illuminate\Http\Response
      */
-    public function edit(JopPostActivity $jopPostActivity)
+    public function edit(JobPostActivity $jopPostActivity)
     {
         //
     }
@@ -64,10 +64,10 @@ class JopPostActivityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\JopPostActivity  $jopPostActivity
+     * @param  \App\JobPostActivity  $jopPostActivity
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JopPostActivity $jopPostActivity)
+    public function update(Request $request, JobPostActivity $jopPostActivity)
     {
         //
     }
@@ -75,10 +75,10 @@ class JopPostActivityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\JopPostActivity  $jopPostActivity
+     * @param  \App\JobPostActivity  $jopPostActivity
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JopPostActivity $jopPostActivity)
+    public function destroy(JobPostActivity $jopPostActivity)
     {
         //
     }

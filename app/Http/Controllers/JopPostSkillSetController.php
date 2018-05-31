@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\JopPostSkillSet;
+use App\JobPostSkillSet;
 use Illuminate\Http\Request;
 
 class JopPostSkillSetController extends Controller
@@ -41,10 +41,10 @@ class JopPostSkillSetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\JopPostSkillSet  $jopPostSkillSet
+     * @param  \App\JobPostSkillSet  $jopPostSkillSet
      * @return \Illuminate\Http\Response
      */
-    public function show(JopPostSkillSet $jopPostSkillSet)
+    public function show(JobPostSkillSet $jopPostSkillSet)
     {
         //
     }
@@ -52,10 +52,10 @@ class JopPostSkillSetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\JopPostSkillSet  $jopPostSkillSet
+     * @param  \App\JobPostSkillSet  $jopPostSkillSet
      * @return \Illuminate\Http\Response
      */
-    public function edit(JopPostSkillSet $jopPostSkillSet)
+    public function edit(JobPostSkillSet $jopPostSkillSet)
     {
         //
     }
@@ -64,10 +64,10 @@ class JopPostSkillSetController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\JopPostSkillSet  $jopPostSkillSet
+     * @param  \App\JobPostSkillSet  $jopPostSkillSet
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JopPostSkillSet $jopPostSkillSet)
+    public function update(Request $request, JobPostSkillSet $jopPostSkillSet)
     {
         //
     }
@@ -75,10 +75,10 @@ class JopPostSkillSetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\JopPostSkillSet  $jopPostSkillSet
+     * @param  \App\JobPostSkillSet  $jopPostSkillSet
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JopPostSkillSet $jopPostSkillSet)
+    public function destroy(JobPostSkillSet $jopPostSkillSet)
     {
         //
     }
