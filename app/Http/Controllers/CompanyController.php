@@ -45,6 +45,8 @@ class CompanyController extends Controller
 
             'title' => 'required',
 
+            'description' => 'required',
+
         ]);
         Company::create($request->all());
 
