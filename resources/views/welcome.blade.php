@@ -91,7 +91,7 @@
             }
 
             .image{
-                position: fixed;
+                position: absolute;
                 top: 100px;
             }
 
@@ -209,51 +209,45 @@
         News title:<br>
         <form method="post" action="/news/">
             @csrf
-            <input type="text" name="name" id="name" placeholder="name"><br>
-            <textarea rows="6" cols="40">
-
-            </textarea>
+            <input type="text" name="title" id="title" placeholder="title"><br>
+            <textarea rows="6" cols="40"></textarea>
             <input type="submit" value="Add">
+
         </form>
 
         <div class="container">
-
+            @foreach($news as $new)
             <div class="tab">
-                <button class="tablinks" onclick="openNews(event, 'Workshop1')">Workshop</button>
-                <button class="tablinks" onclick="openNews(event, 'Workshop2')">Workshop</button>
-
+                <button class="tablinks" onclick="openNews(event, 'title')">{{$new->title}}</button>
             </div>
+            @endforeach
 
-            <div id="Workshop1" class="tabcontent">
-                <h3>Workshop</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolores ducimus est natus quas quia, reprehenderit sint. Alias autem, deserunt doloribus enim error illo impedit ipsam iure, sequi velit veniam?.</p>
-            </div>
 
-            <div id="Workshop2" class="tabcontent">
-                <h3>Workshop</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto aspernatur aut deleniti earum ipsa, magnam sed. Consequatur dolorum est fuga ipsa iste nam necessitatibus nobis odio perspiciatis, sunt? Aperiam.</p>
-            </div>
+            @foreach($news as $new)
+                <div id="title" class="tabcontent">
+                    <h3>{{$new->title}}</h3>
+                    <textarea>{{$new->content}}</textarea>
+                </div>
+                @endforeach
+
 
         </div>
 
 <script>
     function openNews(evt, newsName) {
-        // Declare all variables
+
         var i, tabcontent, tablinks;
 
-        // Get all elements with class="tabcontent" and hide them
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
 
-        // Get all elements with class="tablinks" and remove the class "active"
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
-        // Show the current tab, and add an "active" class to the link that opened the tab
         document.getElementById(newsName).style.display = "block";
         evt.currentTarget.className += " active";
     }

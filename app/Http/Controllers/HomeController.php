@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\company;
 use Illuminate\Http\Request;
+use App\news;
 
 class HomeController extends Controller
 {

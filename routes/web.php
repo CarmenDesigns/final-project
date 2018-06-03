@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $news = \App\news::all();
+    return view('welcome',compact('news'));
 });
+
 
 Auth::routes();
 

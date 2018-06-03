@@ -29,6 +29,7 @@ class CompanyController extends Controller
     public function create()
     {
         return view ('company.create');
+
     }
 
     /**
@@ -39,7 +40,16 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
+      Company::create($request->all());
+        $this->validate($request, [
+
+            'title' => 'required',
+
+        ]);
         Company::create($request->all());
+
+        return redirect()->route('company.index')
+            ->with('success','Post created successfully');
     }
 
     /**
@@ -50,7 +60,9 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        //
+        $company= Company::find($id);
+
+        return view('company.update',compact('company'));
     }
 
     /**
@@ -61,6 +73,7 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
+
         $company = company::find($id);
         return view("company.update", compact('company'));
 
@@ -77,6 +90,7 @@ class CompanyController extends Controller
     {
         $company = Company::find($id);
         $company->update($request->all());
+
     }
 
     /**
@@ -87,11 +101,16 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        $company = Company::findOrFail($id);
-        $company->delete();
+//        $company = Company::findOrFail($id);
+//        $company->delete();
+//
+//        $companies =  Company::all();
+//        return view ('company.index', compact('companies'));
+        Company::find($id)->delete();
 
-        $companies =  Company::all();
-        return view ('company.index', compact('companies'));
+        return redirect()->route('company.index')
+
+            ->with('success','Company deleted successfully');
 
     }
 }
