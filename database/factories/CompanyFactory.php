@@ -8,3 +8,4 @@ $factory->define(App\company::class, function (Faker $faker) {
         'description' => $faker->description,
     ];
 });
+
