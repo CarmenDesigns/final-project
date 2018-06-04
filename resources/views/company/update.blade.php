@@ -2,7 +2,7 @@
 
 @section('content');
 
-<form method="post" action="/company/">
+<form method="post" action="/company/{{$company}}">
     @csrf
     <input name="_method" type="hidden" value="PATCH">
     Company name:<br>
