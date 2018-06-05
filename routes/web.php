@@ -12,8 +12,7 @@
 */
 
 Route::get('/', function () {
-    $news = \App\news::all();
-    return view('welcome',compact('news'));
+    return view('welcome');
 });
 
 

@@ -15,7 +15,7 @@ class NewsController extends Controller
     public function index()
     {
         $news =  news::all();
-        return view ('welcome', compact('news'));
+        return view ('news.index', compact('news'));
 
     }
 
@@ -26,7 +26,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('welcome',compact('news'));
+        return view('news.create',compact('news'));
     }
 
     /**
@@ -38,6 +38,17 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         News::create($request->all());
+        $this->validate($request, [
+
+            'title' => 'required',
+
+            'content' => 'required',
+
+        ]);
+        News::create($request->all());
+
+        return redirect()->route('news.index')
+            ->with('success','Post created successfully');
     }
 
     /**
@@ -48,7 +59,9 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news= News::find($id);
+
+        return view('news.update',compact('news'));
     }
 
     /**
@@ -88,6 +101,7 @@ class NewsController extends Controller
         $news->delete();
 
         $news =  News::all();
-        return view ('news.delete', compact('news'));
+        return view ('news.index', compact('news'));
+
     }
 }

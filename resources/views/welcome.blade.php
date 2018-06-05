@@ -216,23 +216,22 @@
 
         </form>
 
-        <div class="container">
-            @foreach($news as $new)
-            <div class="tab">
-                <button class="tablinks" onclick="openNews(event, 'title')">{{$new->title}}</button>
-            </div>
-            @endforeach
+        {{--<div class="container">--}}
+            {{--@foreach($news as $new)--}}
+            {{--<div class="tab">--}}
+                {{--<button class="tablinks" onclick="openNews(event, 'title')">{{$new->title}}</button>--}}
+            {{--</div>--}}
+            {{--@endforeach--}}
 
 
-            @foreach($news as $new)
-                <div id="title" class="tabcontent">
-                    <h3>{{$new->title}}</h3>
-                    <textarea>{{$new->content}}</textarea>
-                </div>
-                @endforeach
+            {{--@foreach($news as $new)--}}
+                {{--<div id="title" class="tabcontent">--}}
+                    {{--<h3>{{$new->title}}</h3>--}}
+                    {{--<textarea>{{$new->content}}</textarea>--}}
+                {{--</div>--}}
+                {{--@endforeach--}}
 
-
-        </div>
+        {{--</div>--}}
 
 <script>
     function openNews(evt, newsName) {

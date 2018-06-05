@@ -43,7 +43,7 @@ class CompanyController extends Controller
       Company::create($request->all());
         $this->validate($request, [
 
-            'title' => 'required',
+            'name' => 'required',
 
             'description' => 'required',
 
@@ -88,11 +88,12 @@ class CompanyController extends Controller
      * @param  \App\company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
+
         $company = Company::find($id);
         $company->update($request->all());
-
+        return view("company.update", compact('company'));
     }
 
     /**
@@ -110,9 +111,7 @@ class CompanyController extends Controller
 //        return view ('company.index', compact('companies'));
         Company::find($id)->delete();
 
-        return redirect()->route('company.index')
-
-            ->with('success','Company deleted successfully');
-
+//        return redirect()->route('company.index')->withMessage('success','Company deleted successfully');
+        return redirect()->back()->with('success', true);
     }
 }

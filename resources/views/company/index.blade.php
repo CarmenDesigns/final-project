@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content');
-<style>
-    
 
-</style>
 
 
 <h1>Company overview</h1>
@@ -18,9 +15,14 @@
         @csrf
         <input name="_method" type="hidden" value="DELETE">
         <input type="submit" value="Delete">
-        <a href="{{ url('company/update') }}">Edit</a><br><br>
+        <a href="{{ url("company/$company->id/edit") }}">Edit</a><br><br>
+        {{--<a href="{{ url('company/update') }}">Edit</a><br><br>--}}
     </form>
 @endforeach
+
+@if (session()->has('success'))
+    <h1>Company successfully deleted!</h1>
+@endif
 
 <a href="{{ url('company/create') }}">Add new company</a>
 
