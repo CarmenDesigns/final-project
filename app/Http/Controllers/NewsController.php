@@ -26,7 +26,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('news.create',compact('news'));
+        return view('news.create');
     }
 
     /**
@@ -72,7 +72,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        $news = news::find($id);
+        $news = News::find($id);
         return view("news.update", compact('news'));
     }
 
@@ -85,8 +85,16 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+
+            'title' => 'required',
+
+            'content' => 'required',
+
+        ]);
         $news = News::find($id);
         $news->update($request->all());
+//        return view("news.update", compact('news'));
     }
 
     /**
@@ -97,10 +105,10 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        $news= News::findOrFail($id);
-        $news->delete();
 
-        $news =  News::all();
+        dd($id);
+
+        News::findOrFail($id)->delete();
         return view ('news.index', compact('news'));
 
     }

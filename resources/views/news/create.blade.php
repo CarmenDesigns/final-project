@@ -7,7 +7,7 @@
     @csrf
 
     News title:<br>
-    <input type="text" name="name" id="name" placeholder="name"><br>
+    <input type="text" name="title" id="title" placeholder="title"><br>
     Content:<br>
     <input type="text" name="content" id="content" placeholder="content"><br>
     <input type="submit" value="Add"> <br>

@@ -183,6 +183,7 @@
                 <li><a href="#">Contact</a></li>
                 <input type="text" placeholder="Search..">
                 <a href="{{ url('company') }}">Companies overview</a>
+                <a href="{{ url('news') }}">News</a>
             </ul>
         </div>
                 <div class="image">
