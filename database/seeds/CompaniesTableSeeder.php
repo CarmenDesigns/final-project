@@ -11,7 +11,7 @@ class CompaniesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('companies', 50)->insert([
+        DB::table('companies')->insert([
             'name' => str_random(10),
             'description' => str_random(255),
 
