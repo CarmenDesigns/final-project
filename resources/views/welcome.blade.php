@@ -208,14 +208,7 @@
             <h1>Come to one of our workshops</h1>
         </div>
 
-        News title:<br>
-        <form method="post" action="/news/">
-            @csrf
-            <input type="text" name="title" id="title" placeholder="title"><br>
-            <textarea rows="6" cols="40"></textarea>
-            <input type="submit" value="Add">
 
-        </form>
 
         {{--<div class="container">--}}
             {{--@foreach($news as $new)--}}
