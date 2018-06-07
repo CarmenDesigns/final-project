@@ -14,8 +14,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs =  Job::all();
-        return view ('job.index', compact('jobs'));
+
     }
 
     /**
@@ -36,7 +35,7 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        Job::create($request->all());
+
     }
 
     /**

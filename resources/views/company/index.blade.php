@@ -16,7 +16,6 @@
         <input name="_method" type="hidden" value="DELETE">
         <input type="submit" value="Delete">
         <a href="{{ url("company/$company->id/edit") }}">Edit</a><br><br>
-        {{--<a href="{{ url('company/update') }}">Edit</a><br><br>--}}
     </form>
 @endforeach
 

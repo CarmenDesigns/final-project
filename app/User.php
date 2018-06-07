@@ -7,13 +7,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    public function role(){
+    public function role()
+    {
         return $this->belongsTo("App\User");
     }
 
-    public function profile(){
+    public function profile()
+    {
         return $this->hasOne("App/seeker_profile");
     }
+
     use Notifiable;
 
     /**
@@ -33,4 +36,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
 }

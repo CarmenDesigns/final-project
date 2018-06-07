@@ -94,7 +94,7 @@ class NewsController extends Controller
         ]);
         $news = News::find($id);
         $news->update($request->all());
-//        return view("news.update", compact('news'));
+        return view("news.update", compact('news'));
     }
 
     /**
@@ -105,11 +105,10 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-
-        dd($id);
-
+        //dd($id);
         News::findOrFail($id)->delete();
-        return view ('news.index', compact('news'));
+        return redirect()->back()->with('success', true);
+        //return view ('news.index');
 
     }
 }
