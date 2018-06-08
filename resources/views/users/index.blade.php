@@ -6,8 +6,10 @@
 @foreach($users as $user)
     <div class="form">
         <h3>{{$user->name}}</h3>
-
     </div>
+
+
+
     <form method="post" action="/users/{{$user->id}}">
         @csrf
         <input name="_method" type="hidden" value="DELETE">
@@ -17,5 +19,7 @@
 @endforeach
 
 <a href="{{ url('users/create') }}">Add new user</a>
+
+
 
 @endsection
