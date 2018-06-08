@@ -25,6 +25,12 @@
 
     <div class="info">
 
-        <h1 style="text-align: center;  margin-top:50px;">Welcome</h1>
+
+
+         <h1 style="text-align: center;  margin-top:50px;">Welcome {{ Auth::user()->name }}</h1>
     </div>
+
+
+
+
 @endsection

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use App\User;
 use Illuminate\Http\Request;
+
 
 class UsersController extends Controller
 {
@@ -13,7 +16,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+
+        $users = User::all();
+        return view ('users.index', compact('users'));
+
     }
 
     /**
@@ -23,7 +29,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -34,7 +40,18 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+        $this->validate($request, [
+
+            'name' => 'required',
+            'email'=> 'required',
+            'role' => 'required',
+
+        ]);
+        User::create($request->all());
+
+        return redirect()->route('users.index')
+            ->with('success','Post created successfully');
     }
 
     /**
@@ -45,7 +62,9 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        $users= User::find($id);
+
+        return view('users.update',compact('users'));
     }
 
     /**
@@ -56,7 +75,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::find($id);
+        return view("users.update", compact('users'));
     }
 
     /**
@@ -68,7 +88,14 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+
+            'name' => 'required',
+
+        ]);
+        $users = User::find($id);
+        $users->update($request->all());
+        return view("users.update", compact('users'));
     }
 
     /**
@@ -79,6 +106,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        return redirect()->back()->with('success', true);
     }
 }

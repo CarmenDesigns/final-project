@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('company', 'CompanyController');
 
 Route::resource('news', 'NewsController');
+
+Route::resource('users', 'UsersController');
