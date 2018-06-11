@@ -117,7 +117,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Werkzoekend</a></li>
-                <li><a href="#">Over ons</a></li>
+                <li><a href="">Over ons</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
                 <input type="text" placeholder="Search..">
