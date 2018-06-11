@@ -2,12 +2,12 @@
 
 @section('content')
         <!doctype html>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Dashboard </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,20 +24,17 @@
 </div>
 
     <div class="welcome">
-
          <h1 style="text-align: center;  margin-top:50px;">Welcome {{ Auth::user()->name }}</h1>
+
     </div>
 
-<div style="display:flex; justify-content: space-around; margin-top: 50px; " class="container">
-    <div style="height: 500px; width:250px;" class="column">
+<div class="container-info">
+    <div class="column">
         <h2>My information</h2>
     </div>
 
-    <div style="height: 500px; width: 250px;" class="column">
-        <h2>My favorites</h2>
-    </div>
 
-    <div style="height: 500px; width: 250px;" class="column">
+    <div class="column">
         <h2>Workshops</h2>
     </div>
 </div>

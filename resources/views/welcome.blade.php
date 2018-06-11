@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -181,9 +182,10 @@
                 <li><a href="#">Over ons</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-                <input type="text" placeholder="Search..">
                 <a href="{{ url('company') }}">Companies overview</a>
                 <a href="{{ url('news') }}">News</a>
+                <a href="#"> <i class="fas fa-heart"></i></a>
+                <li><a href="#"> <i class="fas fa-search"></i></a>Search</li>
             </ul>
         </div>
                 <div class="image">
