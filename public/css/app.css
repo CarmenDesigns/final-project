@@ -10437,17 +10437,64 @@ a.text-dark:focus {
   text-align: left;
 }
 
-.users h1 {
-  text-align: center;
-  padding: 50px;
-}
-
-.users ul {
-  text-align: center;
-  list-style: none;
+.users {
+  max-width: 960px;
 }
 
 .users input {
-  width: 350px;
+  display: inline-block;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.users h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.title a {
+  padding: 13px;
+  border: 1px solid;
+  border-radius: 12em;
+}
+
+.title a i {
+  padding-left: 7px;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 13px;
+}
+
+input {
+  display: inline-block;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container-users {
+  display: -webkit-box;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 960px;
+}
+
+.container-users h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  max-width: 300px;
+  width: 300px;
+  border: 1px solid lightblue;
 }
 

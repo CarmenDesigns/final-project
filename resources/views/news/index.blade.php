@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content');
-<style>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-
-</style>
-
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<div class="title">
 <h1>News overview</h1>
-
+</div>
 @foreach($news as $new)
     <div class="form">
         <h3>{{$new->title}}</h3>

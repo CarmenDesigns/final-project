@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content');
 
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+</head>
 
 
 <form method="post" action="/users">
@@ -17,9 +21,10 @@
                 <option value = "job seeker">Job seeker</option>
             </select> <br><br>
 
-
-            <li> <input type="submit" value="Add"></li><br>
-            <li>  <a href="{{ url('users') }}">Back</a></li>
+            <div class="input">
+                <li> <input type="submit" value="Add"></li><br>
+                <li>  <a href="{{ url('users') }}">Back</a></li>
+            </div>
         </ul>
     </div>
 

@@ -31,19 +31,59 @@
 
 }
 
-.users{
 
-  h1{
-    text-align: center;
-    padding: 50px;
+.users{
+  max-width: 960px;
+
+
+  input{
+    display: inline-block;
+    align-items: flex-end;
   }
 
+  h1{
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+
+.title{
+  display: flex;
+  margin-bottom: 50px;
+
+  a{
+    padding: 13px;
+    border: 1px solid;
+    border-radius: 12em;
+
+    i{
+      padding-left: 7px;
+    }
+  }
+}
+
   ul{
-    text-align: center;
+    text-align: left;
     list-style: none;
+    padding: 13px;
   }
 
    input{
-    width: 350px;
+     display: inline-block;
+      align-items: flex-end;
   }
+
+
+.container-users{
+  display: -webkit-box;
+  justify-content: space-evenly;
+  max-width: 960px;
+
+h3{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  max-width: 300px;
+  width: 300px;
+  border: 1px solid lightblue;
+}
 }
