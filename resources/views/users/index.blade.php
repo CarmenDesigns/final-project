@@ -1,14 +1,16 @@
 @extends('layouts.app')
 @section('content');
 
-<h1>Users</h1>
+
 
 @foreach($users as $user)
+
+
+    <h1>Users</h1>
+
     <div class="form">
         <h3>{{$user->name}}</h3>
     </div>
-
-
 
     <form method="post" action="/users/{{$user->id}}">
         @csrf

@@ -30,13 +30,28 @@
 
 <div class="container-info">
     <div class="column">
-        <h2>My information</h2>
+        <h2>Personal information</h2>
+        <ul>
+            <li>First name:</li>
+            <li>Last name:</li>
+            <li>Date of birth:</li>
+            <li>Address:</li>
+            <li>E-mail address:</li>
+            <li>Phone number:</li>
+        </ul>
     </div>
 
 
     <div class="column">
         <h2>Workshops</h2>
     </div>
-</div>
 
+
+    <div class="column">
+        <div class="column-jobs">
+            <h2>Recent applications</h2>
+        </div>
+    </div>
+
+</div>
 @endsection

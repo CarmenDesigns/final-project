@@ -15,10 +15,35 @@
 
 .container-info{
   display:flex;
+  text-align: center;
   justify-content: space-around;
   margin-top: 50px;
 };
 
 .column{
-  height: 500px; width:250px;
+  height: 500px;
+  width:300px;
+
+  ul{
+    list-style: none;
+    text-align: left;
+  }
+
+}
+
+.users{
+
+  h1{
+    text-align: center;
+    padding: 50px;
+  }
+
+  ul{
+    text-align: center;
+    list-style: none;
+  }
+
+   input{
+    width: 350px;
+  }
 }
