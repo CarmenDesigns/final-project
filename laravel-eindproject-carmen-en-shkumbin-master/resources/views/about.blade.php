@@ -1,9 +1,6 @@
 @section('content')
     <img src="{{ asset('images/image.jpg'); }}">
 
-
-<h1>Over ons</h1>
-
 <h2>Wie zijn wij</h2>
 
 <P>
@@ -13,7 +10,8 @@
     een baan en ontstaat er een databank met banen en een databank met werkzoekenden.
 </P>
 
-    <footer>
 
-    </footer>
+        <footer>&copy; Copyright 2018 </footer>
+
+
 @endsection

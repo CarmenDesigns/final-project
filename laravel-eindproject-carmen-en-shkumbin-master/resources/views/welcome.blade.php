@@ -95,6 +95,8 @@
 
 
         </style>
+
+        <script src="myscripts.js"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -123,8 +125,6 @@
                 <input type="text" placeholder="Search..">
             </ul>
         </div>
-
-
         </div>
     </body>
 </html>
