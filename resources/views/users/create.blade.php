@@ -22,7 +22,7 @@
             </select> <br><br>
 
             <div class="input">
-                <li> <input type="submit" value="Add"></li><br>
+                <li> <input type="submit"  class="add" value="Add"></li><br>
                 <li>  <a href="{{ url('users') }}">Back</a></li>
             </div>
         </ul>

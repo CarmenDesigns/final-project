@@ -5,13 +5,15 @@
 
 <form method="post" action="/news">
     @csrf
-
-    News title:<br>
-    <input type="text" name="title" id="title" placeholder="title"><br>
-    Content:<br>
-    <input type="text" name="content" id="content" placeholder="content"><br>
-    <input type="submit" value="Add"> <br>
-    <a href="{{ url('news') }}">Back</a>
-
+    <div  class="news">
+        <ul>
+           <li><h5>Company name:</h5></li>
+            <li> <input type="text" name="title" id="title" placeholder="title"></li><br>
+            <li> <h5>Content:</h5></li>
+            <li> <input type="text" name="content" id="content" placeholder="content"></li><br>
+            <li><input type="submit" class="add" value="Add"></li> <br>
+            <li> <a href="{{ url('news') }}">Back</a></li>
+        </ul>
+    </div>
 </form>
 @endsection

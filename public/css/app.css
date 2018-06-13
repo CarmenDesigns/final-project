@@ -10464,6 +10464,10 @@ a.text-dark:focus {
   font-family: 'Open Sans', sans-serif;
 }
 
+.users .add {
+  color: green;
+}
+
 .container-users {
   display: -webkit-box;
   -webkit-box-pack: space-evenly;
@@ -10524,6 +10528,20 @@ article {
 
 .edit input {
   color: black;
+}
+
+.news h5 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.news ul {
+  text-align: left;
+  list-style: none;
+  padding: 13px;
+}
+
+.news .add {
+  color: green;
 }
 
 .company {

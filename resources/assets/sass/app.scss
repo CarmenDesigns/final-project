@@ -58,6 +58,9 @@
   h1{
     font-family: 'Open Sans', sans-serif;
   }
+  .add{
+    color: green;
+  }
 }
 
 .container-users{
@@ -119,6 +122,20 @@ article{
 }
   input{
     color: black;
+  }
+}
+
+.news{
+  h5{
+    font-family: 'Open Sans', sans-serif;
+  }
+  ul{
+    text-align: left;
+    list-style: none;
+    padding: 13px;
+  }
+  .add{
+    color: green;
   }
 }
 //company
