@@ -14,7 +14,7 @@
         <ul>
             <li> <input type="text" name="name" id="name" placeholder="name"></li> <br>
             <li> <input type="text" name="email" id="email" placeholder="email"></li> <br>
-            {{--<li> <input type="text" name="role" id="role" placeholder="role"></li><br>--}}
+
             <select role="role">
                 <option value = "">Select role</option>
                 <option value = "company user">Company user</option>

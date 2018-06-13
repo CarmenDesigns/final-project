@@ -10443,14 +10443,14 @@ a.text-dark:focus {
   font-weight: bold;
 }
 
-ul {
+.users {
+  max-width: 960px;
+}
+
+.users ul {
   text-align: left;
   list-style: none;
   padding: 13px;
-}
-
-.users {
-  max-width: 960px;
 }
 
 .users input {
@@ -10539,5 +10539,19 @@ article {
   font-family: 'Open Sans', sans-serif;
   color: black;
   text-decoration: none;
+}
+
+.companies h5 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.companies ul {
+  text-align: left;
+  list-style: none;
+  padding: 13px;
+}
+
+.companies .add {
+  color: green;
 }
 
