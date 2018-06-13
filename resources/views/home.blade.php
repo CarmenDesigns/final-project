@@ -32,8 +32,7 @@
     <div class="column">
         <h2>Personal information</h2>
         <ul>
-            <li>First name:</li>
-            <li>Last name:</li>
+            <li>Name: {{ Auth::user()->name }}</li>
             <li>Date of birth:</li>
             <li>Address:</li>
             <li>E-mail address:</li>

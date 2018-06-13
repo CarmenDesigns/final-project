@@ -2,27 +2,27 @@
 @section('content');
 
 
-
-<h1>Company overview</h1>
+<div class="title">
+<h1>Companies overview</h1>
+<a href="{{ url('company/create') }}">Add new company</a>
+</div>
 
 @foreach($companies as $company)
-    <div class="form">
-    <h3>{{$company->name}}</h3>
+    <div class="company">
+        <div class="head">
+            <a href="#"> <h3>{{$company->name}}</h3></a>
+        </div>
 
-    <p>{{$company->description}}</p>
+        <div class="description">
+            <p>{{$company->description}}</p>
+        </div>
+        <form method="post" action="/company/{{$company->id}}">
+            @csrf
+            <input name="_method" type="hidden" value="DELETE">
+            <input type="submit" value="Delete">
+            <a href="{{ url("company/$company->id/edit") }}">Edit</a><br><br>
+        </form>
     </div>
-    <form method="post" action="/company/{{$company->id}}">
-        @csrf
-        <input name="_method" type="hidden" value="DELETE">
-        <input type="submit" value="Delete">
-        <a href="{{ url("company/$company->id/edit") }}">Edit</a><br><br>
-    </form>
+
 @endforeach
-
-@if (session()->has('success'))
-    <h1>Company successfully deleted!</h1>
-@endif
-
-<a href="{{ url('company/create') }}">Add new company</a>
-
     @endsection

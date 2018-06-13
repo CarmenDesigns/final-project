@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
 //        $this->call(CompaniesTableSeeder::class);
 //        factory(App\company::class, 100)->create();
 //
-//       // $this->call(NewsTableSeeder::class);
-//        factory(App\News::class, 100)->create();
+        $this->call(NewsTableSeeder::class);
+        factory(App\News::class, 100)->create();
 //
 //        // Role comes before User seeder here.
 //        $this->call(RoleTableSeeder::class);

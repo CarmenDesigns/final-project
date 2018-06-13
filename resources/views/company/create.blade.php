@@ -9,7 +9,7 @@
     Company name:<br>
     <input type="text" name="name" id="name" placeholder="name"><br>
     Description:<br>
-    <input type="text" name="description" id="description" placeholder="description"><br>
+    <i><input type="text" name="description" id="description" placeholder="description"><br></i>
     <input type="submit" value="Add"> <br>
     <a href="{{ url('company') }}">Back</a>
 

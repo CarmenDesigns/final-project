@@ -10437,6 +10437,18 @@ a.text-dark:focus {
   text-align: left;
 }
 
+.column ul li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 13px;
+}
+
 .users {
   max-width: 960px;
 }
@@ -10450,6 +10462,22 @@ a.text-dark:focus {
 
 .users h1 {
   font-family: 'Open Sans', sans-serif;
+}
+
+.container-users {
+  display: -webkit-box;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 960px;
+}
+
+.container-users h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  max-width: 300px;
+  width: 300px;
+  border: 1px solid lightblue;
 }
 
 .title {
@@ -10469,32 +10497,47 @@ a.text-dark:focus {
   padding-left: 7px;
 }
 
-ul {
-  text-align: left;
-  list-style: none;
-  padding: 13px;
-}
-
 input {
   display: inline-block;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-color: white;
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.container-users {
-  display: -webkit-box;
+article {
+  display: inline-block;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   max-width: 960px;
+  width: 330px;
 }
 
-.container-users h3 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 23px;
-  max-width: 300px;
+.edit .update {
+  color: green;
+}
+
+.edit input {
+  color: black;
+}
+
+.company {
+  display: inline-block;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 960px;
   width: 300px;
-  border: 1px solid lightblue;
+}
+
+.company .head a {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  text-decoration: none;
 }
 

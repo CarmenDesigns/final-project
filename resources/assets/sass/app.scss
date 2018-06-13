@@ -13,6 +13,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+//homepage
+
 .container-info{
   display:flex;
   text-align: center;
@@ -27,11 +29,22 @@
   ul{
     list-style: none;
     text-align: left;
+    li{
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
 
 }
 
-
+//users
+//users create
+ul{
+  text-align: left;
+  list-style: none;
+  padding: 13px;
+}
 .users{
   max-width: 960px;
 
@@ -46,6 +59,21 @@
   }
 }
 
+.container-users{
+  display: -webkit-box;
+  justify-content: space-evenly;
+  max-width: 960px;
+
+  h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    max-width: 300px;
+    width: 300px;
+    border: 1px solid lightblue;
+  }
+}
+
+//news&company title
 
 .title{
   display: flex;
@@ -62,28 +90,48 @@
   }
 }
 
-  ul{
-    text-align: left;
-    list-style: none;
-    padding: 13px;
-  }
+
 
    input{
      display: inline-block;
       align-items: flex-end;
+     background-color: white;
+     color: red;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 15px;
+     font-weight: bold;
   }
 
 
-.container-users{
-  display: -webkit-box;
+
+//news
+article{
+  display: inline-block;
   justify-content: space-evenly;
   max-width: 960px;
-
-h3{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 23px;
-  max-width: 300px;
-  width: 300px;
-  border: 1px solid lightblue;
+  width: 330px;
 }
+
+.edit{
+.update{
+  color: green;
+}
+  input{
+    color: black;
+  }
+}
+
+.company{
+  display: inline-block;
+  justify-content: space-evenly;
+  max-width: 960px;
+  width: 300px;
+
+  .head{
+    a{
+      font-family: 'Open Sans', sans-serif;
+      color: black;
+      text-decoration: none;
+    }
+  }
 }

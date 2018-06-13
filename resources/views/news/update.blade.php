@@ -4,11 +4,13 @@
 
 <form method="post" action="/news/{{$news->id}}">
     @csrf
-    <input name="_method" type="hidden" value="PUT">
-    News title:<br>
-    <input type="text" name="title" id="title" value="{{$news->title}}"><br><br>
-    <input type="text" name="content" id="content" value="{{$news->content}}"><br><br>
-    <input type="submit" value="Update">
+    <div class="news-edit">
+        <input name="_method" type="hidden" value="PUT">
+        <h1>News update</h1>
+        <input type="text" name="title" id="title" value="{{$news->title}}"><br><br>
+        <input type="text" name="content" id="content" value="{{$news->content}}"><br><br>
+       <input type="submit" class="update" value="Update">
+    </div>
 </form>
 
 @endsection
