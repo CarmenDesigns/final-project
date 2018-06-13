@@ -10443,6 +10443,26 @@ a.text-dark:focus {
   font-weight: bold;
 }
 
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-field {
+  color: black;
+  border: none;
+}
+
 .users {
   max-width: 960px;
 }

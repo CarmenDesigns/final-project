@@ -40,6 +40,23 @@
 
 //users
 //users create
+.search{
+  display: flex;
+
+  button{
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+.search-field{
+  color: black;
+  border: none;
+}
+
 
 .users{
   max-width: 960px;
