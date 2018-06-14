@@ -25,3 +25,5 @@ Route::resource('company', 'CompanyController');
 Route::resource('news', 'NewsController');
 
 Route::resource('users', 'UsersController');
+
+Route::resource('search', 'SearchController');

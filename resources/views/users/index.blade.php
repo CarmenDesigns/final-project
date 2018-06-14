@@ -9,6 +9,10 @@
 <h1>Users</h1>
 
 <a href="{{ url('users/create') }}">Add new<i class="fas fa-user-plus"></i></a>
+    <form method="get" action="{{url('/search')}}">
+        <input type="search">
+        <input type="submit">
+    </form>
 </div>
 @foreach($users as $user)
 
