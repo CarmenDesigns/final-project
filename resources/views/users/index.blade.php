@@ -14,7 +14,7 @@
         <input type="search">
         <input type="submit">
     </form>
->>>>>>> master
+
 </div>
 @foreach($users as $user)
 
