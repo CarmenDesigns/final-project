@@ -11,9 +11,8 @@
 <a href="{{ url('users/create') }}">Add new<i class="fas fa-user-plus"></i></a>
     <div class="search">
         <a> <input type="text" class="search-field" id="link_box" placeholder="Search for names.."></a>
-        <button id="search-button" value="search" onclick="window.location = document.getElementById('link_box').value;"><i class="fas fa-search"></i></button>
+        {{--<button id="search-button" value="search" onclick="window.location = document.getElementById('link_box').value;"><i class="fas fa-search"></i></button>--}}
         {{--<input type="button" id="search-button" value="search" onclick="window.location = document.getElementById('link_box').value;">--}}
-        <div id="results"></div>
     </div>
 </div>
 @foreach($users as $user)
@@ -32,12 +31,6 @@
     </form>
 </div>
 
-<script type="text/javascript">
-    document.getElementById("search-button").addEventListener("click", function(){
-        window.location = document.getElementById('link_box').value;
-    });
-
-</script>
 
 @endforeach
 
