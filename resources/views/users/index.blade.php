@@ -9,11 +9,12 @@
 <h1>Users</h1>
 
 <a href="{{ url('users/create') }}">Add new<i class="fas fa-user-plus"></i></a>
-    <div class="search">
-        <a> <input type="text" class="search-field" id="link_box" placeholder="Search for names.."></a>
-        {{--<button id="search-button" value="search" onclick="window.location = document.getElementById('link_box').value;"><i class="fas fa-search"></i></button>--}}
-        {{--<input type="button" id="search-button" value="search" onclick="window.location = document.getElementById('link_box').value;">--}}
-    </div>
+
+    <form method="get" action="{{url('/search')}}">
+        <input type="search">
+        <input type="submit">
+    </form>
+>>>>>>> master
 </div>
 @foreach($users as $user)
 
