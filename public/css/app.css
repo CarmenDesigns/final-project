@@ -10491,6 +10491,18 @@ a.text-dark:focus {
   margin-bottom: 50px;
 }
 
+.title .search-field {
+  border: 1px solid lightblue;
+  border-radius: 12em;
+  padding: 5px;
+  color: black;
+}
+
+.title .search-button {
+  background: transparent;
+  border: none;
+}
+
 .title a {
   padding: 13px;
   border: 1px solid;
