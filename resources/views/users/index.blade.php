@@ -10,24 +10,32 @@
 <h1>Users</h1>
 
 <a href="{{ url('users/create') }}">Add new<i class="fas fa-user-plus"></i></a>
+<<<<<<< HEAD
     <form method="get" action="{{url('/search')}}" style="padding: 5px">
         <input type="search" name="q" placeholder="search users" class="search-field">
         <button class="search-button"><i class="fas fa-search"></i></button>
+=======
+
+    <form method="get" action="{{url('/search')}}">
+        <input type="search">
+        <input type="submit">
+>>>>>>> development
     </form>
+
 </div>
 
 @foreach($users as $user)
 
 <div class="container-users">
 
-        <h3>{{$user->name}}</h3>
 
+           <h3>{{$user->name}}</h3>
     <form method="post" action="/users/{{$user->id}}">
         @csrf
         <div class="input">
-        <input name="_method" type="hidden" value="DELETE">
-        <input type="submit" value="Delete">
-        <a href="{{ url("users/$user->id/edit") }}">Edit</a><br><br>
+            <input name="_method" type="hidden" value="DELETE">
+            <input type="submit" value="Delete">
+            <a href="{{ url("users/$user->id/edit") }}">Edit</a><br><br>
         </div>
     </form>
 </div>
