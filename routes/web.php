@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,4 +25,6 @@ Route::resource('news', 'NewsController');
 
 Route::resource('users', 'UsersController');
 
-Route::resource('search', 'SearchController');
+//Route::resource('search', 'SearchController');
+Route::get('/search/{search}/{users}', ['uses' => 'SearchController@index','as' => 'search']);
+

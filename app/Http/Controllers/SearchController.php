@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use App\User;
+
+
 
 class SearchController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,10 @@ class SearchController extends Controller
      */
     public function index()
     {
-        dd("yay we zitten in de search");
+        $search = \Request::get('search');
+        $users = User::where('name', 'like', '%'.$search.'%');
+
+            return view('search',compact('users'));
     }
 
     /**

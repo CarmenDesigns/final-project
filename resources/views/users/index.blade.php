@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content');
+
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
@@ -10,10 +11,11 @@
 
 <a href="{{ url('users/create') }}">Add new<i class="fas fa-user-plus"></i></a>
     <form method="get" action="{{url('/search')}}" style="padding: 5px">
-        <input type="search" placeholder="search users" class="search-field">
+        <input type="search" name="q" placeholder="search users" class="search-field">
         <button class="search-button"><i class="fas fa-search"></i></button>
     </form>
 </div>
+
 @foreach($users as $user)
 
 <div class="container-users">
