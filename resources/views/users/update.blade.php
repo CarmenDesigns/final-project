@@ -9,13 +9,15 @@
 
 <div class="users">
     <h1>Edit user</h1>
-    <ul>
+
 <form method="post" action="/users/{{$users->id}}">
     @csrf
+    <div class="edit">
     <input name="_method" type="hidden" value="PUT">
     User name:<br>
     <input type="text" name="name" id="name" value="{{$users->name}}"><br><br>
-    <input type="submit" value="Update">
+    <input type="submit" class="update" value="Update">
+</div>
 </form>
-
+</div>
 @endsection

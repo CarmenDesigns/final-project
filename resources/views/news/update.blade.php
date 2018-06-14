@@ -4,7 +4,7 @@
 
 <form method="post" action="/news/{{$news->id}}">
     @csrf
-    <div class="news-edit">
+    <div class="edit">
         <input name="_method" type="hidden" value="PUT">
         <h1>News update</h1>
         <input type="text" name="title" id="title" value="{{$news->title}}"><br><br>
